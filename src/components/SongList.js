@@ -4,6 +4,7 @@ import { selectSong } from '../actions';
 
 class SongList extends Component {
     renderList() {
+        //selectSong(); //No!
         return this.props.songs.map((song) => {
             return (
                 <div className='item' key={song.title}>
@@ -32,7 +33,7 @@ class SongList extends Component {
 }
 
 const mapStateToProps = (state) => { // name doesn't matter   
-    console.log(state);
+    //console.log(state);
     return { songs: state.songs };
 };
 
